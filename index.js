@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 4001
 
 app.use(express.json())
 
-const allowedOrigins = ['http://localhost:5173'];
+const allowedOrigins = ['http://localhost:5173', 'https://www.interspellar.org', 'https://interspellar.org'];
 app.use(cors({ origin: allowedOrigins }));
 
 const puzzleRoutes = require('./routes/puzzles.routes.js')

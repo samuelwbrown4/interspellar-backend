@@ -4,6 +4,8 @@ const auth = (req , res) => {
     try{
         const {email , newUser} = req.body
 
+        email = email.toLowerCase()
+
         let user = validateEmail(email)
 
         if(!user && newUser){

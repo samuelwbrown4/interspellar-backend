@@ -2,7 +2,7 @@ const {validateEmail , createUserQuery} = require('../repo/users.repo')
 
 const auth = (req , res) => {
     try{
-        const {email , newUser} = req.body
+        let {email , newUser} = req.body
 
         email = email.toLowerCase()
 

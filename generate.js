@@ -19,7 +19,7 @@ async function downloadSCOWLList() {
     const text = fs.readFileSync(path.join(__dirname, 'data/scowl_list.txt'), 'utf-8');
     const words = text.split('\n')
         .filter(w => w === w.toLowerCase())  // drops header, abbreviations, proper nouns
-        .filter(w => /^[a-z]+$/.test(w))     // drops possessives (word's) and anything non-alpha
+        .filter(w => /^[a-z]+$/.test(w))     // drops possessives and anything non-alpha
         .filter(w => w.length >= 4)
     fs.writeFileSync(path.join(__dirname, 'data/scowl-words.json'), JSON.stringify(words, null, 2));
 }

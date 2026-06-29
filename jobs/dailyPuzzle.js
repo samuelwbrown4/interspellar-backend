@@ -1,7 +1,7 @@
 const {db} = require('../db/db')
 const cron = require('node-cron')
 
-const newDailyPuzzle = () => cron.schedule('45 21 * * *' ,() => {
+const newDailyPuzzle = () => cron.schedule('59 3 * * *' ,() => {
     db.prepare(`UPDATE puzzles
                     SET is_todays_puzzle = 0,
                         has_been_shown = 1

@@ -39,7 +39,7 @@ router.get('/share' , (req , res) => {
         <head>
             <meta property="og:title" content="Interspellar" />
             <meta property="og:description" content="I scored ${score} points on Interspellar!" />
-            <meta property="og:image" content=${process.env.NODE_ENV === "development" ? `"http://localhost:4001/api/og-image?score=${score}"` :`"https://api.interspellar.org/api/og-image?score=${score}"`} />
+            <meta property="og:image" content=${process.env.NODE_ENV === "development" ? `"http://localhost:4001/api/users/og-image?score=${score}"` :`"https://api.interspellar.org/api/users/og-image?score=${score}"`} />
             <meta property="og:url" content=${process.env.NODE_ENV === 'development' ? 'http://localhost:5173' : "https://interspellar.org"} />
             <meta http-equiv="refresh" content="0;url=${process.env.NODE_ENV === 'development' ? 'http://localhost:5173' : "https://interspellar.org"}" />
         </head>

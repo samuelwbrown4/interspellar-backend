@@ -19,7 +19,7 @@ router.get('/og-image', (req, res) => {
 
     // score text
     ctx.fillStyle = 'white'
-    ctx.font = 'bold 80px sans-serif'
+    ctx.font = 'bold 80px "DejaVu Sans"'
     ctx.textAlign = 'center'
     ctx.fillText(`Interspellar`, 600, 200)
     ctx.fillText(`Score: ${score}`, 600, 350)
